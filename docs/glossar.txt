@@ -1,0 +1,35 @@
+Glossar:
+
+Story:
+	A set of processes and objects required for success - encompassing
+	several tasks. A story has a story title as well as a complexity-
+	value.
+
+Task:
+	A piece of work to be performed having a title, a task status
+	and an associatee.
+
+Associatee:
+	A person which is currently associated to a task or story.
+
+Lane:
+	A visual representation of a story.
+
+Segment:
+	A specific part of a lane. Must be element of:
+	{tbd; wip; hold; ok}		
+
+Element:
+	Visual representation of a task within a story.
+	Shows a task title and its associatee.
+
+Complexity value:
+	One of:	{0; 1; 2; 3; 5; 8; 13}
+
+Browser:
+	A program to view HTML content, as well as running
+	JS programs.
+
+TicketNo:
+	Identifier, referring to a story or task within the
+	connected ticket system.

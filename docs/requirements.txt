@@ -1,0 +1,53 @@
+Requirements:
+
+We want to have a locally running browser tool, that will represent
+sprint related tickets in a standup friendly way.
+
+I hereby define standup friendly as looking as follows:
+
+	Each story is to be represented as a horizontal lane, consisting of the
+	following segments:
+		Backlog|Wip|Hold|Review|Done
+
+	Each segment has an individual width, depending on the amount of
+	elements it contains. The segments shall to be visually distinguishable
+	by background color.
+
+	Each element represents a task associated to the story, shown in
+	the current lane. Such an element needs to show:
+		- Ticket No
+		- Headline
+		- Associated person
+		- ...
+
+	All lanes widths are to be equal, defined by the width of the
+	longest lane.
+
+	Scrolling shall be possible horizontally as well as vertically.
+	The visual windows dimensions may be smaller than the total height
+	or widths but have to make sure that at least the height of one lane
+	as well as the width of one element is completely visible - except
+	during scrolling.
+
+Addresses:
+	I		/jiranimo/PROJECTNAME/sprint/?id=123
+	II	/jiranimo/PROJECTNAME/sprint/?current
+
+It is important to reserve one route level, called PROJECTNAME
+to be filled individually to be able to install several instances of the
+tool simultaneausly.
+
+Each project therefore has its individual address and a local
+configuration containing the access credentials.
+
+Accessing one of the addresses above, will put the following
+actions into motion:
+
+	- Login to the locally defined jira account.
+	- Request all stories and their tasks depending on the
+		search query used:
+			?id=123		-	Request from Sprint with ID 123
+			?current	-	Request from all Sprints, but select the most recent one.
+	- The browser content is cleared.
+	- The browser content is to be filled with a visual representation,
+		as described above. Scrolling is reset to top/left corner.
